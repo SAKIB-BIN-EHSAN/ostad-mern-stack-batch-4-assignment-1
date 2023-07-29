@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mern-Assignment-1</title>
+  </head>
+  <body>
+    <h1>Filter Even Numbers</h1>
+    <p id="showFilteredNumber"></p>
+  </body>
+
+  <script>
+    function filterEvenNumber(numbers) {
+      var evenNumbers = [];
+      var j = 0;
+
+      for (var i = 0; i < numbers.length; i++) {
+        if (numbers[i] % 2 == 0) {
+          evenNumbers[j++] = numbers[i];
+        }
+      }
+
+      var ans = "";
+      var sectionToShow = document.getElementById("showFilteredNumber");
+      if (evenNumbers.length != 0) {
+        ans = "Filtered even numbers are -> ";
+        for (var i = 0; i < evenNumbers.length; i++) {
+          ans += evenNumbers[i];
+
+          if (evenNumbers.length - 1 != i) {
+            ans += " ,";
+          }
+        }
+        sectionToShow.innerText = ans;
+      } else {
+        sectionToShow.innerText =
+          "There are no even numbers in the given array";
+      }
+    }
+
+    filterEvenNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+  </script>
+</html>

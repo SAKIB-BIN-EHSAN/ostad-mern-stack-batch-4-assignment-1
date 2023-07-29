@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mern-Assignment-1</title>
+  </head>
+  <body>
+    <h1>Display Multiplication Table</h1>
+    <div>
+      <label for="num">Enter number: </label>
+      <input type="number" id="num" />
+    </div>
+    <button id="submitButton">Submit</button>
+    <p id="notify"></p>
+
+    <script>
+      var button = document.getElementById("submitButton");
+
+      button.addEventListener("click", function () {
+        var number = document.getElementById("num").value;
+
+        if (number != "") {
+          for (var i = 1; i <= 10; i++) {
+            console.log(`${i} X ${number} = ${i * number}`);
+          }
+        } else {
+          var notifySection = document.getElementById("notify");
+          notifySection.innerText = "You have to enter a number";
+        }
+      });
+    </script>
+  </body>
+</html>

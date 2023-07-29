@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mern-Assignment-1</title>
+  </head>
+  <body>
+    <h1>Generate Grade</h1>
+
+    <script>
+      function calculateGrade(grade) {
+        var result = "";
+        switch (true) {
+          case grade >= 90:
+            result = "A";
+            break;
+          case grade >= 80 && grade <= 89:
+            result = "B";
+            break;
+          case grade >= 70 && grade <= 79:
+            result = "C";
+            break;
+          case grade >= 60 && grade <= 69:
+            result = "D";
+            break;
+          case grade < 60:
+            result = "F";
+            break;
+          default:
+            break;
+        }
+
+        return result;
+      }
+
+      console.log(calculateGrade(6));
+    </script>
+  </body>
+</html>
